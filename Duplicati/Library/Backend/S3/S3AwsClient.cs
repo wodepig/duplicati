@@ -134,6 +134,7 @@ namespace Duplicati.Library.Backend
                 BucketName = bucketName,
                 Key = keyName,
                 InputStream = source
+               ,UseChunkEncoding = false
             };
             if (!string.IsNullOrWhiteSpace(m_storageClass))
                 objectAddRequest.StorageClass = new S3StorageClass(m_storageClass);
